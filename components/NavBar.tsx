@@ -4,6 +4,7 @@ import Link from "next/link"
 
 import Logo from './Logo'
 import ButtonFill from "@components/ButtonFill"
+import { colorOptions } from "@constants/color"
 
 
 
@@ -17,7 +18,6 @@ const NavBar: React.SFC<NavBarProps> = ({ logoVisible }) => {
     const [color, setColor] = useState("")
 
     const genRandomColor = () => {
-        let colorOptions = ["red", "green", "blue"];
         let idx = Math.floor(Math.random() * colorOptions.length);
         setColor(colorOptions[idx])
         if (colorOptions[idx] != color) {
@@ -68,7 +68,7 @@ const NavBar: React.SFC<NavBarProps> = ({ logoVisible }) => {
                     </Link>
                 </li>
                 <li className="link" onMouseEnter={genRandomColor}><Link href="/about">About Us</Link></li>
-                <li className="link"><Link href="/contact">Contact</Link></li>
+                <li className="link" onMouseEnter={genRandomColor}><Link href="/contact">Contact</Link></li>
             </UlStyled>
         </Nav>
     );
