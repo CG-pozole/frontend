@@ -1,30 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is the [CG pozole](https://cgpozole.com/) frontend project.
 
-## Getting Started
-
-First, run the development server:
+## Set up the project for dev.
 
 ```bash
-npm run dev
-# or
-yarn dev
+    git clone git@github.com:CG-pozole/frontend.git
+
+    cd frontend
+
+    npm install
+
+    npm run dev
+    # or
+    yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Now you have the local server running. [Local Server](http://localhost:3000)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Social Media
 
-## Learn More
+[Instagram]("https://instagram.com")
+[Facebook]("https://facebook.com")
 
-To learn more about Next.js, take a look at the following resources:
+## Future BootCamp 2020
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To get into the BootCamp check out our Website.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[CG Pozole BootCamp]("https://cgpozole.com/bootcamp/2020")
 
-## Deploy on Vercel
+## Contact us
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Email: contact@cgpozole.com

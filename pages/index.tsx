@@ -11,11 +11,9 @@ export interface IndexProps {
 
 
 const ImgCenter = styled.img`
-  height: 50rem; 
+  height: 60rem; 
   display: block;
-  position: fixed;
-  top:-5%;
-  left: 25%;
+  margin: -10rem auto;
   z-index: -1;
 
 `
