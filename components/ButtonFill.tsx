@@ -12,7 +12,6 @@ const Button = styled.a`
         :hover{
             background: rgb(191,0,255);
             background: linear-gradient(-90deg, rgba(191,0,255,1) 0%, rgba(255,0,128,1) 100%);
-            
         }
     
     `

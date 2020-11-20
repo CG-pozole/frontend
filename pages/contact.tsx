@@ -3,17 +3,17 @@ import NavBar from '@components/NavBar';
 import * as React from 'react';
 
 
-export interface AboutProps {
+export interface ContactProps {
 
 }
 
-const About: React.SFC<AboutProps> = () => {
+const Contact: React.SFC<ContactProps> = () => {
     return (
         <div>
             <Header subtitle="About us" />
-            <NavBar logoVisible={true} actual="about" />
+            <NavBar logoVisible={true} actual="contact" />
         </div>
     );
 }
 
-export default About;
+export default Contact;

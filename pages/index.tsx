@@ -3,6 +3,7 @@ import Header from "@components/Header"
 import NavBar from '@components/NavBar';
 import styled from "@emotion/styled";
 import { ColorsHexa } from "@constants/color"
+import ButtonBorder from '@components/ButtonBorder';
 
 
 
@@ -40,6 +41,16 @@ const Container = styled.div`
     top: 80%;
     right: 10%;
   }
+`
+
+
+const ButtonContainer = styled.div`
+  display: flex;
+  width: 20%;
+  margin:0rem auto;
+  justify-content: space-between;
+  
+
 
 `
 
@@ -54,6 +65,11 @@ const index: React.SFC<IndexProps> = () => {
           <Circle className="circle-1"></Circle>
           <Circle className="circle-2"></Circle>
         </Container>
+
+        <ButtonContainer>
+          <ButtonBorder text="More Info." href={"/about"} purple={true} />
+          <ButtonBorder text="BootCamp" href={"/bootcamp/2020"} blue={true} />
+        </ButtonContainer>
       </div>
     </div>
 

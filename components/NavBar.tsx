@@ -14,7 +14,7 @@ export interface NavBarProps {
 }
 
 
-const NavBar: React.SFC<NavBarProps> = ({ logoVisible }) => {
+const NavBar: React.SFC<NavBarProps> = ({ logoVisible, actual }) => {
     const [color, setColor] = useState("")
 
     const genRandomColor = () => {
@@ -30,9 +30,10 @@ const NavBar: React.SFC<NavBarProps> = ({ logoVisible }) => {
 
 
     const Nav = styled.nav`
+        width: 80%;
         display: flex;
         justify-content: space-between;
-        margin: 0.5rem 4rem;
+        margin: 0.5rem auto;
     `
 
     const UlStyled = styled.ul`
@@ -62,13 +63,21 @@ const NavBar: React.SFC<NavBarProps> = ({ logoVisible }) => {
         <Nav>
             {logoVisible ? <Logo /> : <div></div>}
             <UlStyled>
-                <li>
-                    <Link href="/bootcamp/2020" passHref>
-                        <ButtonFill text="BootCamp 2020" />
-                    </Link>
-                </li>
-                <li className="link" onMouseEnter={genRandomColor}><Link href="/about">About Us</Link></li>
-                <li className="link" onMouseEnter={genRandomColor}><Link href="/contact">Contact</Link></li>
+                {actual.toUpperCase() != "BOOTCAMP" &&
+                    <li>
+                        <Link href="/bootcamp/2020" passHref>
+                            <ButtonFill text="BootCamp 2020" />
+                        </Link>
+                    </li>
+                }
+                {
+                    actual.toUpperCase() != "ABOUT" &&
+                    <li className="link" onMouseEnter={genRandomColor}><Link href="/about">About Us</Link></li>
+                }
+                {
+                    actual.toUpperCase() != "CONTACT" &&
+                    <li className="link" onMouseEnter={genRandomColor}><Link href="/contact">Contact</Link></li>
+                }
             </UlStyled>
         </Nav>
     );
