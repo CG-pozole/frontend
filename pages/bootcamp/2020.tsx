@@ -10,7 +10,7 @@ export interface BootCampProps {
 const BootCamp: React.SFC<BootCampProps> = () => {
     return (
         <div>
-            <Header subtitle="About us" />
+            <Header subtitle="BootCamp 2020" />
             <NavBar logoVisible={true} actual="bootcamp" />
         </div>
     );

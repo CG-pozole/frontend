@@ -10,7 +10,7 @@ export interface ContactProps {
 const Contact: React.SFC<ContactProps> = () => {
     return (
         <div>
-            <Header subtitle="About us" />
+            <Header subtitle="Contact" />
             <NavBar logoVisible={true} actual="contact" />
         </div>
     );
