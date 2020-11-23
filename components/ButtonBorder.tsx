@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from "@emotion/styled"
 import { Gradients } from "@constants/color"
+import { Fonts } from "@constants/fonts"
 
 
 
@@ -25,8 +26,7 @@ const ButtonBorder: React.SFC<ButtonBorderProps> = ({ href, text, purple, green,
         border-style: solid;
         border-image-slice: 1;
         border-image-source: ${Gradients.pinkPurpleLeft};
-        font-family: 'Staatliches', cursive;
-        font-weight: bold;
+        font-family: ${Fonts.primary};
         font-size: 1.2rem;
         
 
@@ -52,8 +52,7 @@ const ButtonBorder: React.SFC<ButtonBorderProps> = ({ href, text, purple, green,
         border-style: solid;
         border-image-slice: 1;
         border-image-source: ${Gradients.greenBlueLeft};
-        font-family: 'Staatliches', cursive;
-        font-weight: bold;
+        font-family: ${Fonts.primary};
         font-size: 1.2rem;
         
 

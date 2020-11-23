@@ -5,6 +5,7 @@ import Link from "next/link"
 import Logo from './Logo'
 import ButtonFill from "@components/ButtonFill"
 import { colorOptions } from "@constants/color"
+import { Fonts } from '@constants/fonts'
 
 
 
@@ -47,9 +48,10 @@ const NavBar: React.SFC<NavBarProps> = ({ logoVisible, actual }) => {
         li{
             color: white;
             list-style: none;
-            margin: 1.2rem 3rem;
-            font-family: 'Staatliches', cursive;
+            margin: 1.2rem auto;
             font-size: 1rem;
+            font-weight: 600px;
+            font-family: ${Fonts.primary};
         }
          
         .link{
