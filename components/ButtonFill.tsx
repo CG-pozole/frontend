@@ -21,6 +21,6 @@ export interface PropsButtonField {
     text: string;
 }
 
-const ButtonFill: React.SFC<PropsButtonField> = ({ href, text }) => (<Button href={href}>{text}</Button>)
+const ButtonFill: React.FunctionComponent<PropsButtonField> = ({ href, text }) => (<Button href={href} >{text}</Button>)
 
 export default ButtonFill;
