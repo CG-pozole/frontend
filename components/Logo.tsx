@@ -17,6 +17,7 @@ export interface LogoProps {
 const LogoImg = styled.img`
 
     width: 10rem;
+    margin: auto;
 
     :hover{
         cursor: pointer;

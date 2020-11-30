@@ -4,8 +4,9 @@ import Link from "next/link"
 
 import Logo from './Logo'
 import ButtonFill from "@components/ButtonFill"
-import { colorOptions } from "@constants/color"
+import { colorOptions, ColorsHexa } from "@constants/color"
 import { Fonts } from '@constants/fonts'
+import { dimension } from '@constants/dimensions'
 
 
 
@@ -14,6 +15,13 @@ export interface NavBarProps {
     logoVisible: boolean;
 }
 
+
+const LogoContainer = styled.div`
+    @media(max-width: ${dimension.tablet}){
+        display: inline;
+    }
+
+`
 
 const NavBar: React.SFC<NavBarProps> = ({ logoVisible, actual }) => {
     const [color, setColor] = useState("")
@@ -35,6 +43,18 @@ const NavBar: React.SFC<NavBarProps> = ({ logoVisible, actual }) => {
         display: flex;
         justify-content: space-between;
         margin: 0.5rem auto;
+
+
+        @media(max-width: ${dimension.tablet}){
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        @media(max-width: ${dimension.mobile}){
+            flex-direction: column;
+            ${logoVisible && `background-color: ${ColorsHexa.backgroundClear};`}
+            margin-bottom: 2rem;
+        }
     `
 
     const UlStyled = styled.ul`
@@ -44,6 +64,16 @@ const NavBar: React.SFC<NavBarProps> = ({ logoVisible, actual }) => {
         margin: 2rem 2rem;
         justify-content: space-between;
         z-index: 1;
+        
+        @media(max-width: ${dimension.tablet}){
+            width:50%;
+        }
+        
+        @media(max-width: ${dimension.mobile}){
+            width: 100%;
+            ${logoVisible && `margin: -0.9rem 0rem 1.5rem -1.2rem;`}
+            justify-content: space-around;
+        }
     
         li{
             color: white;
@@ -52,6 +82,15 @@ const NavBar: React.SFC<NavBarProps> = ({ logoVisible, actual }) => {
             font-size: 1rem;
             font-weight: 600px;
             font-family: ${Fonts.primary};
+            
+            @media(max-width: ${dimension.tablet}){
+                font-size: 0.9rem;
+                margin: 1rem auto;
+            }
+            @media(max-width: ${dimension.mobile}){
+                font-size: 0.8rem;
+
+            }
         }
          
         .link{

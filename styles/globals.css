@@ -10,6 +10,13 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  color: white;
+}
+
+p {
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  font-weight: normal;
 }
 
 * {
