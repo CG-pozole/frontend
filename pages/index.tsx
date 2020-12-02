@@ -5,6 +5,7 @@ import styled from "@emotion/styled";
 import { ColorsHexa } from "@constants/color"
 import ButtonBorder from '@components/ButtonBorder';
 import { dimension } from '@constants/dimensions';
+import Footer from '@layout/footer';
 
 
 
@@ -129,6 +130,7 @@ const index: React.SFC<IndexProps> = () => {
           </p>
         </TextContainer>
       </div>
+      <Footer />
     </React.Fragment>
 
   );

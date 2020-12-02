@@ -2,7 +2,8 @@
 
 export enum ColorsHexa {
     backgroundDark = "#000000",
-    backgroundClear = "#191919"
+    backgroundClear = "#191919",
+    grey = "#292929"
 }
 
 

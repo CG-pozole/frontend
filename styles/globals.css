@@ -22,3 +22,7 @@ p {
 * {
   box-sizing: border-box;
 }
+
+.t-center {
+  text-align: center;
+}
