@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from "@emotion/styled"
 import { Gradients } from "@constants/color"
 import { Fonts } from "@constants/fonts"
+import Link from 'next/link';
 
 
 
@@ -15,7 +16,7 @@ export interface ButtonBorderProps {
 }
 
 
-const ButtonBorder: React.SFC<ButtonBorderProps> = ({ href, text, purple, green, blue }) => {
+const ButtonBorder: React.FunctionComponent<ButtonBorderProps> = ({ href, text, purple, green, blue }) => {
     const ButtonPurple = styled.a`
         background: rgba(0,0,255,0%);
         padding: 1rem 2rem;
@@ -70,15 +71,19 @@ const ButtonBorder: React.SFC<ButtonBorderProps> = ({ href, text, purple, green,
         <React.Fragment>
             <div>
                 {purple &&
-                    <ButtonPurple href={href}>
-                        {text}
-                    </ButtonPurple>
+                    <Link href={href}>
+                        <ButtonPurple>
+                            {text}
+                        </ButtonPurple>
+                    </Link>
                 }
                 {
                     blue &&
-                    <ButtonBlue href={href}>
-                        {text}
-                    </ButtonBlue>
+                    <Link href={href}>
+                        <ButtonBlue >
+                            {text}
+                        </ButtonBlue>
+                    </Link>
                 }
             </div>
         </React.Fragment>

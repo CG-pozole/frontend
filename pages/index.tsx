@@ -44,6 +44,10 @@ const Circle = styled.div`
     display: none;
   }
 
+  @media(max-width: 1366px){
+    top: -30%;
+  }
+
 
 
 `
@@ -52,6 +56,9 @@ const Container = styled.div`
   .circle-2{
     top: 80%;
     right: -10%;
+    @media(max-width: 1366px){
+      display: none;
+    }
 
   }
 `
@@ -63,6 +70,9 @@ const ButtonContainer = styled.div`
   margin:0rem auto;
   justify-content: space-between;
   
+  @media(max-width: 1366px){
+    width: 30%;
+  }
 
   @media(max-width: ${dimension.tablet}){
     width: 60%;
@@ -81,7 +91,7 @@ const TextContainer = styled.div`
     margin: 3rem auto;
     text-align:center;
     width: 80;
-    z-index: 2;
+    z-index: 1;
 
   @media(max-width: ${dimension.tablet}){
     padding: 2rem;

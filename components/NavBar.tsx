@@ -16,14 +16,8 @@ export interface NavBarProps {
 }
 
 
-const LogoContainer = styled.div`
-    @media(max-width: ${dimension.tablet}){
-        display: inline;
-    }
 
-`
-
-const NavBar: React.SFC<NavBarProps> = ({ logoVisible, actual }) => {
+const NavBar: React.FunctionComponent<NavBarProps> = ({ logoVisible, actual }) => {
     const [color, setColor] = useState("")
 
     const genRandomColor = () => {
@@ -106,9 +100,7 @@ const NavBar: React.SFC<NavBarProps> = ({ logoVisible, actual }) => {
             <UlStyled>
                 {actual.toUpperCase() != "BOOTCAMP" &&
                     <li>
-                        <Link href="/bootcamp/2020" passHref>
-                            <ButtonFill text="BootCamp 2020" />
-                        </Link>
+                        <ButtonFill href="/bootcamp/2020" text="BootCamp 2020" />
                     </li>
                 }
                 {
