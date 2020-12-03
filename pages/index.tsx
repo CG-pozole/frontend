@@ -31,27 +31,6 @@ const ImgCenter = styled.img`
 
 `
 
-const Circle = styled.div`
-  background-color: ${ColorsHexa.backgroundClear};
-  padding: 2rem;
-  width: 30rem;
-  height: 30rem; 
-  border-radius: 100%;
-  position: fixed;
-  top: 0;
-
-  // TABLET AVerage size
-  @media(max-width: ${dimension.tablet}){
-    display: none;
-  }
-
-  @media(max-width: 1366px){
-    top: -30%;
-  }
-
-
-
-`
 
 const Container = styled.div`
   .circle-2{
@@ -112,6 +91,7 @@ const TextContainer = styled.div`
 
 const Body = styled.div`
   margin-bottom: 5rem;
+  background-image: url("/img/circles.png");
 
   @media(max-width: ${dimension.tablet}){
     margin-bottom: 15rem;
@@ -126,10 +106,6 @@ const index: React.SFC<IndexProps> = () => {
       <Header subtitle="Home" />
       <Body>
         <ImgCenter src={"/img/CGpozole-logo-01.svg"} />
-        <Container>
-          <Circle className="circle-1"></Circle>
-          <Circle className="circle-2"></Circle>
-        </Container>
         <ButtonContainer>
           <ButtonBorder text="More Info." href={"/about"} purple={true} />
           <ButtonBorder text="BootCamp" href={"/bootcamp/2020"} blue={true} />
