@@ -109,12 +109,22 @@ const TextContainer = styled.div`
   }
 `
 
+
+const Body = styled.div`
+  margin-bottom: 5rem;
+
+  @media(max-width: ${dimension.tablet}){
+    margin-bottom: 15rem;
+  }
+
+`
+
 const index: React.SFC<IndexProps> = () => {
   return (
     <React.Fragment>
       <NavBar logoVisible={false} actual="Home" />
       <Header subtitle="Home" />
-      <div>
+      <Body>
         <ImgCenter src={"/img/CGpozole-logo-01.svg"} />
         <Container>
           <Circle className="circle-1"></Circle>
@@ -129,7 +139,7 @@ const index: React.SFC<IndexProps> = () => {
             "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt maiores totam, saepe explicabo deleniti fugit."
           </p>
         </TextContainer>
-      </div>
+      </Body>
       <Footer />
     </React.Fragment>
 

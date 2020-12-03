@@ -1,4 +1,5 @@
 import { ColorsHexa, Gradients } from '@constants/color';
+import { dimension } from '@constants/dimensions';
 import { Fonts } from '@constants/fonts';
 import styled from '@emotion/styled';
 import Link from 'next/link';
@@ -21,20 +22,46 @@ const FooterContainer = styled.footer`
     display: flex;
     justify-content: space-around;
     font-family: ${Fonts.secondary};
-    padding: 2rem;
+
+    @media(max-width: ${dimension.mobile}){
+        flex-direction: column-reverse;
+        width: 130%;
+    }
+
 
     .sec-3{
         /* background-color: red; */
         width: 20%;
 
+        @media(max-width: ${dimension.tablet}){
+            width: 33%;
+        }
+
+        @media(max-width: ${dimension.mobile}){
+            display: none;
+        }
+
     }
     .sec-2{
         /* background-color: yellow; */
         width: 33%;
+
+        @media(max-width: ${dimension.mobile}){
+            width: 100%;
+        }
+
     }
     .sec-1{
         /* background-color: green; */
         width: 20%;
+
+        @media(max-width: ${dimension.tablet}){
+            width: 33%
+        }
+
+        @media(max-width: ${dimension.mobile}){
+            width: 100%;
+        }
     }
 
     h3{
@@ -69,6 +96,10 @@ const FooterContainer = styled.footer`
         li{
             margin-right: 1.5rem;
             border-bottom: 0.2rem solid whitesmoke;
+
+            @media(max-width: ${dimension.tablet}){
+                margin-right: 0.2rem;
+            }
         }
     }
 
@@ -86,19 +117,29 @@ const FooterContainer = styled.footer`
 
     .contact{
         margin: 5rem 0rem;
+
+        
         h4, h3{
             font-weight: normal;
             text-align: start;
+
+            @media(max-width: ${dimension.mobile}){
+                text-align: end;
+            }
+
         }
         
         h3{
-            width: 20%;
+            width: 100%;
             border-bottom: 0.3rem solid whitesmoke; 
+
         }
     }
 
 
     .social{
+
+
         h3{
             border-bottom: 0.2rem solid whitesmoke;
             width: 30%;
