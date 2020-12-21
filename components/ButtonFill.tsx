@@ -13,7 +13,6 @@ const Button = styled.a`
         @media(max-width: ${dimension.mobile}){
             background: linear-gradient(90deg, rgba(191,0,255,0.85) 0%, rgba(255,0,128,0.85) 100%);
             padding: 1rem;
-
         }
         
 

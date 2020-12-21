@@ -13,11 +13,12 @@ export interface ButtonBorderProps {
     green?: boolean;
     purple?: boolean;
     blue?: boolean;
+    orange?: boolean
 
 }
 
 
-const ButtonBorder: React.FunctionComponent<ButtonBorderProps> = ({ href, text, purple, green, blue }) => {
+const ButtonBorder: React.FunctionComponent<ButtonBorderProps> = ({ href, text, purple, green, blue, orange }) => {
     const ButtonPurple = styled.a`
         background: rgba(0,0,255,0%);
         padding: 1rem 2rem;
@@ -72,6 +73,34 @@ const ButtonBorder: React.FunctionComponent<ButtonBorderProps> = ({ href, text, 
         }
     
     `
+
+
+    const ButtonOrange = styled.a`
+        background: rgba(0,0,255,0%);
+        padding: 1rem 2rem;
+        z-index: 1;
+        text-align: center;
+        color: white;
+        border-width: 4px;
+        border-style: solid;
+        border-image-slice: 1;
+        border-image-source: ${Gradients.pinkOrange};
+        font-family: ${Fonts.primary};
+        font-size: 1.2rem;
+        :hover{
+            border-image-slice: 1;
+            border-image-source: ${Gradients.pinkOrange}; 
+            cursor: pointer;
+        } 
+
+
+        @media(max-width: ${dimension.mobile}){
+            font-size: 1rem;
+            padding: 1rem auto;
+        }
+    
+    `
+
     return (
         <React.Fragment>
             <div>
@@ -88,6 +117,13 @@ const ButtonBorder: React.FunctionComponent<ButtonBorderProps> = ({ href, text, 
                         <ButtonBlue >
                             {text}
                         </ButtonBlue>
+                    </Link>
+                }
+                {orange &&
+                    <Link href={href}>
+                        <ButtonOrange>
+                            {text}
+                        </ButtonOrange>
                     </Link>
                 }
             </div>
