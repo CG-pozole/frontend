@@ -28,14 +28,29 @@ const BodyFirst = styled.div`
     justify-content: space-around;
     width: 100%;
     padding: 0 4rem;
+
+
+    @media(max-width: ${dimension.mobile}){
+        padding: 0 1rem;
+    }
     
     .title{
         width: 30%;
         margin: -3rem auto 2rem;
+        
 
         @media(max-width: ${dimension.tablet}){
             width: 50%;
         }
+
+        @media(max-width: ${dimension.mobile}){
+            width:100%;
+            h1{
+                margin: 3rem 2rem 1rem 2rem;
+                font-size: 2rem;
+            }
+        }
+
     }
 
     .text-desc{
@@ -59,12 +74,18 @@ const BodyFirst = styled.div`
     }
 
     .video{
-        margin:2rem auto;
+        margin:4rem auto;
         
-        @media(max-width: ${dimension.mobile}){
-            transform:scale(0.4);
-            margin:2rem -6rem;
+        
+        @media(max-width: ${dimension.tablet}){
+            transform:scale(0.8);
+            margin: 2rem auto;
             
+        }
+
+        @media(max-width: ${dimension.mobile}){
+            transform: scale(0.4);
+            margin: -4rem -8rem;
         }
     }
 `
@@ -88,6 +109,12 @@ const BodySecond = styled.div`
         flex-direction: column;
         justify-content: space-between;
     }
+
+    @media(max-width: ${dimension.mobile}){
+        padding: 0rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
     
     img{
         margin-bottom: 3rem;
@@ -98,7 +125,7 @@ const BodySecond = styled.div`
         }
 
         @media(max-width: ${dimension.mobile}){
-            width: 50%;
+            width: 80%;
         }
     }
 
@@ -129,18 +156,26 @@ const BodySecond = styled.div`
             border-image-source: ${Gradients.yellowGreen}
         }
         
+        @media(max-width: ${dimension.mobile}){
+            span{
+                font-size: 1.5rem;
+                margin-left: 0rem;
+                
+            } 
+                
+        }
     }
 
 `
 
 
 const BodyThird = styled.div`
-    @media(max-width: ${dimension.mobile}){
-        display: none;
-    }
     padding: 10rem;
     width: 75%;
     margin: auto;
+    display: flex;
+    justify-content: space-around;
+    
 
     @media(max-width: ${dimension.tablet}){
         width: 100%;
@@ -151,9 +186,15 @@ const BodyThird = styled.div`
         line-height: 2rem;
         margin-bottom: 4rem;
         border-bottom: 0.2rem solid white;
+
         &:last-of-type{
             border-bottom: 0rem;
             margin-bottom: 1.5rem;
+        }
+
+
+        @media(max-width: ${dimension.mobile}){
+            text-align: start;
         }
     }
     .question{
@@ -161,6 +202,14 @@ const BodyThird = styled.div`
     }
 
 
+    @media(max-width: ${dimension.mobile}){
+        h1{
+            font-size: 2rem;
+        }
+        
+        padding: 2rem;
+
+    }
 `
 
 const BootCamp: React.FunctionComponent<BootCampProps> = () => {
