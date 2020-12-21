@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 import { Gradients } from "@constants/color"
 import { Fonts } from "@constants/fonts"
 import Link from 'next/link';
+import { dimension } from '@constants/dimensions';
 
 
 
@@ -30,7 +31,10 @@ const ButtonBorder: React.FunctionComponent<ButtonBorderProps> = ({ href, text, 
         font-family: ${Fonts.primary};
         font-size: 1.2rem;
         
-
+      @media(max-width: ${dimension.mobile}){
+            font-size: 1rem;
+            padding: 1rem auto;
+        }
 
 
 
@@ -60,6 +64,12 @@ const ButtonBorder: React.FunctionComponent<ButtonBorderProps> = ({ href, text, 
             border-image-source: ${Gradients.greenBlueRight}; 
             cursor: pointer;
         } 
+
+
+        @media(max-width: ${dimension.mobile}){
+            font-size: 1rem;
+            padding: 1rem auto;
+        }
     
     `
     return (
