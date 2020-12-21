@@ -55,11 +55,6 @@ const ButtonBorder: React.FunctionComponent<ButtonBorderProps> = ({ href, text, 
         border-image-source: ${Gradients.greenBlueLeft};
         font-family: ${Fonts.primary};
         font-size: 1.2rem;
-        
-
-
-
-
         :hover{
             border-image-slice: 1;
             border-image-source: ${Gradients.greenBlueRight}; 

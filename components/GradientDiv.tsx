@@ -19,3 +19,10 @@ export const YellowLine = styled.div`
     border-image-slice: 1;
     border-image-source: ${Gradients.yellowGreen};
 `
+
+export const PinkLine = styled.div`
+    border-bottom: 0.4rem solid;
+    font-size: 3.5rem;
+    border-image-slice: 1;
+    border-image-source: ${Gradients.pinkOrange};
+`

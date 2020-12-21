@@ -25,7 +25,7 @@ const FooterContainer = styled.footer`
 
     @media(max-width: ${dimension.mobile}){
         flex-direction: column-reverse;
-        width: 130%;
+        width: 100%;
     }
 
 

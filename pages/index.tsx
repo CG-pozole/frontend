@@ -2,7 +2,6 @@ import * as React from 'react';
 import Header from "@components/Header"
 import NavBar from '@components/NavBar';
 import styled from "@emotion/styled";
-import { ColorsHexa } from "@constants/color"
 import ButtonBorder from '@components/ButtonBorder';
 import { dimension } from '@constants/dimensions';
 import Footer from '@layout/footer';
@@ -25,23 +24,13 @@ const ImgCenter = styled.img`
   }
 
   @media(max-width: ${dimension.mobile}){
-    height: 30rem;
+    height: 20rem;
     margin-top: -4.5rem;
   }
 
 `
 
 
-const Container = styled.div`
-  .circle-2{
-    top: 80%;
-    right: -10%;
-    @media(max-width: 1366px){
-      display: none;
-    }
-
-  }
-`
 
 
 const ButtonContainer = styled.div`
@@ -60,9 +49,13 @@ const ButtonContainer = styled.div`
   }
 
   @media(max-width: ${dimension.mobile}){
-    margin: 3rem 3.5rem;
-    width: 100%;
-    justify-content: space-around;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-between;
+    margin-top: 7rem;
+    height: 10rem;
+    margin-bottom: 2rem;
+    text-align: center;
   }
 `
 
@@ -84,7 +77,7 @@ const TextContainer = styled.div`
     padding: 2rem;
     margin: auto;
     text-align:center;
-    width: 130%;
+    width: 70%;
   }
 `
 
@@ -97,14 +90,37 @@ const Body = styled.div`
     margin-bottom: 15rem;
   }
 
+  @media(max-width: ${dimension.mobile}){
+    margin-bottom: 3rem;
+  }
+
+
 `
 
-const index: React.SFC<IndexProps> = () => {
+const NavContainer = styled.div`
+  width: 70%;
+
+  @media(max-width: ${dimension.tablet}){
+    width: 80%;
+  }
+
+
+  @media(max-width: ${dimension.mobile}){
+    width: 70%;
+  }
+
+`
+
+
+
+const index: React.FunctionComponent<IndexProps> = () => {
   return (
     <React.Fragment>
-      <NavBar logoVisible={false} actual="Home" />
       <Header subtitle="Home" />
       <Body>
+        <NavContainer>
+          <NavBar logoVisible={false} actual="about" />
+        </NavContainer>
         <ImgCenter src={"/img/CGpozole-logo-01.svg"} />
         <ButtonContainer>
           <ButtonBorder text="More Info." href={"/about"} purple={true} />
