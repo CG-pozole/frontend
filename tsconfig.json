@@ -4,7 +4,8 @@
     "paths": {
       "@components/*": ["components/*"],
       "@constants/*": ["constants/*"],
-      "@layout/*": ["layout/*"]
+      "@layout/*": ["layout/*"],
+      "@styles/*": ["styles/*"]
     },
     "target": "es5",
     "lib": [

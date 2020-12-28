@@ -7,7 +7,7 @@ export interface ContactProps {
 
 }
 
-const Contact: React.SFC<ContactProps> = () => {
+const Contact: React.FunctionComponent<ContactProps> = () => {
     return (
         <div>
             <Header subtitle="Contact" />
