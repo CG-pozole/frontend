@@ -1,3 +1,14 @@
+/*
+
+    Contact page rendered for react.
+
+    Author: Alejandro AS
+    Date: 29-12-2020
+
+*/
+
+
+
 import Header from '@components/Header';
 import NavBar from '@components/NavBar';
 import * as React from 'react';

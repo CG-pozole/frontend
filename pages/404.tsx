@@ -1,3 +1,14 @@
+/*
+    404 error page for React.
+
+    Date: 28-12-2020
+    Author: Alejandro AS
+
+
+*/
+
+
+
 import React from 'react'
 
 
