@@ -42,9 +42,11 @@ const About: React.FunctionComponent<AboutProps> = () => {
             <YellowLine />
             <BodySecond>
                 <video muted={true} />
-                <span>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, enim!
-                </span>
+                <div className="legend-container">
+                    <span>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, enim!
+                    </span>
+                </div>
             </BodySecond>
             <PinkLine />
             <BodyThird>
@@ -52,19 +54,19 @@ const About: React.FunctionComponent<AboutProps> = () => {
                     <Title text="Lo que hacemos" />
                 </div>
                 <div className="icon-container">
-                    <div className="icon">
+                    <div className="icon one">
                         <div className="icon-circle"></div>
                         <p>Lorem ipsum dolor sit.</p>
                     </div>
-                    <div className="icon">
+                    <div className="icon two">
                         <div className="icon-circle"></div>
                         <p>Lorem ipsum dolor sit.</p>
                     </div>
-                    <div className="icon">
+                    <div className="icon three">
                         <div className="icon-circle"></div>
                         <p>Lorem ipsum dolor sit.</p>
                     </div>
-                    <div className="icon">
+                    <div className="icon four">
                         <div className="icon-circle"></div>
                         <p>Lorem ipsum dolor sit.</p>
                     </div>

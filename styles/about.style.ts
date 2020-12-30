@@ -13,6 +13,7 @@
 import styled from "@emotion/styled"
 import { Fonts } from '@constants/fonts';
 import { ColorsHexa } from '@constants/color';
+import { dimension } from "@constants/dimensions";
 
 
 export const BodyFirst = styled.div`
@@ -21,7 +22,6 @@ export const BodyFirst = styled.div`
     justify-content: space-between;
     text-align: center;
     margin: 4rem auto;
-
 
     p{
         width: 45%;
@@ -32,6 +32,22 @@ export const BodyFirst = styled.div`
 
     img{
         width: 40%;
+    }
+
+    /* media queries IPAD */
+
+    @media(max-width: ${dimension.tablet}){
+        flex-direction: column;
+    
+        p{
+            width: 100%;
+        }
+
+        img{
+            width: 65%;
+            margin: 4rem auto;
+        
+        }
     }
 
 
@@ -48,8 +64,24 @@ export const BodySecond = styled.div`
         text-align: center;
     }
 
+    .legend-container{
+        margin: auto;
+        text-align: center;
+    }
 
 
+    /* Ipad responsive design */
+
+    @media(max-width: ${dimension.tablet}){
+        span {
+            text-align: center;
+            margin: auto;
+        }
+
+        .legend-container{
+            width: 60%;
+        }
+    }
 `
 
 export const BodyThird = styled.div`
@@ -77,12 +109,47 @@ export const BodyThird = styled.div`
         height: 240px;
         border-radius: 20rem;
     }
+
+    /* Ipad media querries */
+    @media(max-width: ${dimension.tablet}){
+
+        .title-container {
+            width: 50%;
+
+            h1{
+                font-size: 3rem;
+            }
+        }
+
+        .icon-container{
+            display: grid;
+        }
+        
+        .one{
+           grid-column: 2/3;
+           grid-row: 1; 
+           margin-bottom: 2rem;
+        }
+    }
+
+
 `
 
 
 export const TitleContainer = styled.div`
     width: 30%;
     margin: auto;
+
+
+    /* media queries ipad */
+
+    @media(max-width: ${dimension.tablet}){
+        width: 50%;
+
+        h1{
+            font-size: 3rem;
+        }
+    }
 
 
 `
