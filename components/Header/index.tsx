@@ -1,3 +1,13 @@
+/*
+    Header Component.
+
+
+    Authors: Alejandro AS
+    Date: 18-12-2020
+
+*/
+
+
 import React from 'react'
 import { Helmet } from "react-helmet"
 
@@ -7,7 +17,7 @@ export interface HeaderProps {
     subtitle: String;
 }
 
-const Header: React.SFC<HeaderProps> = ({ subtitle }) => {
+const Header: React.FunctionComponent<HeaderProps> = ({ subtitle }) => {
     return (
         <header>
             <Helmet>

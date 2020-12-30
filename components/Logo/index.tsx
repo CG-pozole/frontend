@@ -1,12 +1,16 @@
-// LOGO COMPONENT 
-// RENDER DE IMAGE LOGO
-// 19-11-2020 
-// ALEJANDRO AS
+/* 
+
+ LOGO COMPONENT 
+ RENDER DE IMAGE LOGO
+ Date: 19-11-2020 
+ Authors: Alejandro AS
+
+ */ 
 
 
 import Link from 'next/link';
 import * as React from 'react';
-import styled from "@emotion/styled"
+import { LogoImg } from "./style"
 
 
 export interface LogoProps {
@@ -14,20 +18,10 @@ export interface LogoProps {
 }
 
 
-const LogoImg = styled.img`
-
-    width: 10rem;
-    margin: auto;
-
-    :hover{
-        cursor: pointer;
-        transform: scale(1.1)
-    }
-
-`
 
 
-const Logo: React.SFC<LogoProps> = () => {
+
+const Logo: React.FunctionComponent<LogoProps> = () => {
     return (
         <React.Fragment>
             <Link href="/">

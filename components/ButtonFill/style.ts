@@ -1,9 +1,17 @@
-import * as React from 'react';
+/*
+    Styled compoents for the ButtonFill Component.
+
+    Authors: Alejandro AS
+    Date: 22-12-2020
+*/
+
+
+
 import styled from "@emotion/styled"
-import Link from 'next/link';
 import { dimension } from '@constants/dimensions';
 
-const Button = styled.a`
+
+export const Button = styled.a`
         background: rgb(191,0,255);
         background: linear-gradient(90deg, rgba(191,0,255,0.5) 0%, rgba(255,0,128,0.5) 100%);
         border-radius: 2rem;
@@ -23,16 +31,3 @@ const Button = styled.a`
         }
     
     `
-
-export interface PropsButtonField {
-    href: string;
-    text: string;
-}
-
-const ButtonFill: React.FunctionComponent<PropsButtonField> = ({ href, text }) => (
-    <Link href={href}>
-        <Button >{text}</Button>
-    </Link>
-)
-
-export default ButtonFill;

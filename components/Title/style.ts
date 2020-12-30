@@ -1,14 +1,17 @@
-import * as React from 'react';
+/*
+    Styled Components for the Title component.
+
+    Authors: Alejandro AS
+    Date: 29-12-2020
+*/
+
+
 import styled from "@emotion/styled"
 import { Fonts } from '@constants/fonts';
 import { Gradients } from '@constants/color';
 
-export interface TitleProps {
-    text: string
-}
 
-
-const TitleStyled = styled.h1`
+export const TitleStyled = styled.h1`
     font-family: ${Fonts.secondary};
     color: white;
     text-align: center;
@@ -19,13 +22,3 @@ const TitleStyled = styled.h1`
     border-image-source: ${Gradients.pinkPurpleLeft};
 `
 
-
-const Title: React.FunctionComponent<TitleProps> = ({ text }) => {
-    return (
-        <TitleStyled>
-            {text}
-        </TitleStyled>
-    );
-}
-
-export default Title;

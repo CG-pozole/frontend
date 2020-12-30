@@ -11,9 +11,20 @@
 
 
 import '../styles/globals.css'
+import Head from "next/head"
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+
+  return (
+  <>
+    <Head>
+        <meta name="viewport" content="width=device-width, user-scalable=no"/>
+        <meta lang="es"/>
+        <meta title="CGpozole estudio de animacion." content="El mejor estudio de animacion en Mexico City."/> 
+    </Head>
+    <Component {...pageProps} />
+  </>
+  )
 }
 
 export default MyApp

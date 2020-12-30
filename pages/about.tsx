@@ -17,6 +17,7 @@ import { YellowLine, PinkLine } from "@components/GradientDiv"
 import ButtonBorder from '@components/ButtonBorder';
 
 import { BodyFirst, BodySecond, BodyThird, TitleContainer } from "@styles/about.style"
+import Footer from '@layout/footer';
 
 
 export interface AboutProps {
@@ -70,6 +71,7 @@ const About: React.FunctionComponent<AboutProps> = () => {
                 </div>
                 <ButtonBorder text="Contactanos" href="/contact" orange={true} />
             </BodyThird>
+            <Footer/>
         </div>
     );
 }

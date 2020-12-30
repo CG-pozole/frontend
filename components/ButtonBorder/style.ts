@@ -1,25 +1,20 @@
-import * as React from 'react';
+/*
+
+    Styled components for ButtonBorder.
+
+    Authors: Alejandro AS
+    Date: 22-12-2020
+
+*/
+
+
+
 import styled from "@emotion/styled"
 import { Gradients } from "@constants/color"
 import { Fonts } from "@constants/fonts"
-import Link from 'next/link';
 import { dimension } from '@constants/dimensions';
 
-
-
-export interface ButtonBorderProps {
-    href?: string;
-    text: string;
-    green?: boolean;
-    purple?: boolean;
-    blue?: boolean;
-    orange?: boolean
-
-}
-
-
-const ButtonBorder: React.FunctionComponent<ButtonBorderProps> = ({ href, text, purple, green, blue, orange }) => {
-    const ButtonPurple = styled.a`
+export const ButtonPurple = styled.a`
         background: rgba(0,0,255,0%);
         padding: 1rem 2rem;
         z-index: 1;
@@ -48,7 +43,7 @@ const ButtonBorder: React.FunctionComponent<ButtonBorderProps> = ({ href, text, 
     `
 
 
-    const ButtonBlue = styled.a`
+export const ButtonBlue = styled.a`
         background: rgba(0,0,255,0%);
         padding: 1rem 2rem;
         z-index: 1;
@@ -75,7 +70,7 @@ const ButtonBorder: React.FunctionComponent<ButtonBorderProps> = ({ href, text, 
     `
 
 
-    const ButtonOrange = styled.a`
+export const ButtonOrange = styled.a`
         background: rgba(0,0,255,0%);
         padding: 1rem 2rem;
         z-index: 1;
@@ -101,35 +96,3 @@ const ButtonBorder: React.FunctionComponent<ButtonBorderProps> = ({ href, text, 
     
     `
 
-    return (
-        <React.Fragment>
-            <div>
-                {purple &&
-                    <Link href={href}>
-                        <ButtonPurple>
-                            {text}
-                        </ButtonPurple>
-                    </Link>
-                }
-                {
-                    blue &&
-                    <Link href={href}>
-                        <ButtonBlue >
-                            {text}
-                        </ButtonBlue>
-                    </Link>
-                }
-                {orange &&
-                    <Link href={href}>
-                        <ButtonOrange>
-                            {text}
-                        </ButtonOrange>
-                    </Link>
-                }
-            </div>
-        </React.Fragment>
-    );
-
-}
-
-export default ButtonBorder;

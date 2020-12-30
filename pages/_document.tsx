@@ -22,9 +22,6 @@ class MyDocument extends Document {
                     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"></link>
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;700&display=swap" rel="stylesheet"></link>
-                    <meta lang="es"/>
-                    <meta title="CGpozole estudio de animacion." content="El mejor estudio de animacion en Mexico City."/> 
-                    <meta name="viewport" content="width=device-width, user-scalable=no"/>
                 </Head>
                 <script src="https://kit.fontawesome.com/11b3324a0d.js" crossOrigin="anonymous"></script>
                 <body className="my-body-class">

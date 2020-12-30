@@ -1,8 +1,20 @@
+/*
+
+    NavBar Component.
+
+    Authors: Alejandro AS
+    Date: 22-12-2020
+ 
+  
+ */ 
+
+
+
 import React, { useState } from 'react'
 import styled from "@emotion/styled"
 import Link from "next/link"
 
-import Logo from './Logo'
+import Logo from '../Logo'
 import ButtonFill from "@components/ButtonFill"
 import { colorOptions, ColorsHexa } from "@constants/color"
 import { Fonts } from '@constants/fonts'
@@ -28,8 +40,6 @@ const NavBar: React.FunctionComponent<NavBarProps> = ({ logoVisible, actual }) =
         }
         return genRandomColor()
     }
-
-
 
 
     const Nav = styled.nav`
