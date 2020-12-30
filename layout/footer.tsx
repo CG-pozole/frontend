@@ -155,10 +155,10 @@ const Footer: React.FunctionComponent<FooterProps> = () => {
                 <div className="social">
                     <h3>Follow us</h3>
                     <a href="https://github.com/CG-pozole" target="_blank">
-                        <i className="fab fa-github "></i>
+                        <i aria-hidden className="fab fa-github "></i>
                     </a>
-                    <i className="fab fa-instagram"></i>
-                    <i className="fab fa-facebook"></i>
+                    <i aria-hidden className="fab fa-instagram"></i>
+                    <i aria-hidden className="fab fa-facebook"></i>
                 </div>
                 <div className="contact">
                     <h3>Contact:</h3>

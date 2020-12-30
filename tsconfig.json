@@ -5,7 +5,8 @@
       "@components/*": ["components/*"],
       "@constants/*": ["constants/*"],
       "@layout/*": ["layout/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"], 
+      "@content/*": ["content/*"]
     },
     "target": "es5",
     "lib": [
