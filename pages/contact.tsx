@@ -31,7 +31,7 @@ const Contact: React.FunctionComponent<ContactProps> = () => {
             <Header subtitle="Contact" />
             <NavBar logoVisible={true} actual="contact" />
             <TitleContainer>
-                <Title text="Contact"/>
+                <Title text="Contacto"/>
             </TitleContainer>
             <Container>
                 <TextContainer>

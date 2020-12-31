@@ -6,6 +6,7 @@
 */
 
 
+import { dimension } from "@constants/dimensions"
 import { Fonts } from "@constants/fonts"
 import styled from "@emotion/styled"
 
@@ -13,7 +14,6 @@ import styled from "@emotion/styled"
 export const TitleContainer = styled.div`
     width: 30%;
     margin: 3rem auto;
-
 `
 
 
@@ -32,14 +32,31 @@ export const Container = styled.section`
     
     p {
         font-weight: bold;
+        font-size: 1.3rem;
     }
 
     strong{
 
         font-family: ${Fonts.secondary};
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         margin-right: 0.5rem;
     }
+
+
+    /* Media queries for Ipad */
+
+    @media(max-width: ${dimension.tablet}){
+        flex-direction: column;
+
+
+        img{
+            margin: 3rem auto 0rem auto;
+            width: 70%;
+        }
+    }
+
+
+
 `
 
 
@@ -53,6 +70,19 @@ export const ContainerLegend = styled.section`
         text-align: center;
         font-weight: bold;
     }
+
+
+    /* media queries for Tablet */
+
+    @media(max-width: ${dimension.tablet}){
+        width: 60%;
+
+
+        .legend-text{
+            font-size: 1.2rem;
+        }
+    }
+
 
 
 `
