@@ -51,6 +51,21 @@ export const BodyFirst = styled.div`
     }
 
 
+    @media(max-width: ${dimension.mobile}){
+        padding: 2rem 3rem;
+
+        p{
+            font-size: 1rem;
+        }
+
+
+        img{
+            width: 100%;
+        }
+
+    }
+
+
 `
 
 export const BodySecond = styled.div`
@@ -80,6 +95,14 @@ export const BodySecond = styled.div`
 
         .legend-container{
             width: 60%;
+        }
+    }
+
+
+    @media(max-width: ${dimension.mobile}){
+        .legend-container{
+            width: 100%;
+            font-size: 1.3rem;
         }
     }
 `
@@ -132,6 +155,33 @@ export const BodyThird = styled.div`
         }
     }
 
+    @media(max-width: ${dimension.mobile}){
+        .title-container{
+            width: 70%;
+
+            h1{
+                font-size: 2rem;
+            }
+
+        }
+
+        .icon-container{
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .icon-circle{
+            background-color: grey;
+            width: 200px;
+            height: 200px;
+            margin: 0.9rem auto;
+            border-radius: 20rem;
+
+        }
+    }
+
+
 
 `
 
@@ -148,6 +198,16 @@ export const TitleContainer = styled.div`
 
         h1{
             font-size: 3rem;
+        }
+    }
+
+
+    /* media queries phone */
+    @media(max-width: ${dimension.mobile}){
+        width: 70%;
+
+        h1{
+            font-size: 2.3rem;
         }
     }
 
