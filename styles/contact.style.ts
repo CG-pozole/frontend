@@ -14,6 +14,17 @@ import styled from "@emotion/styled"
 export const TitleContainer = styled.div`
     width: 30%;
     margin: 3rem auto;
+
+
+    @media(max-width: ${dimension.mobile}){
+        width: 60%;
+
+        h1{
+            font-size: 2.5rem;
+        }
+
+
+    }
 `
 
 
@@ -56,6 +67,21 @@ export const Container = styled.section`
     }
 
 
+    /* Media queries for Mobile */
+
+    @media(max-width: ${dimension.mobile}){
+        padding: 1.5rem;
+
+
+        p{
+            font-size: 1rem;
+        }
+        
+        strong{
+            font-size: 1.6rem;
+        }
+    }
+
 
 `
 
@@ -80,6 +106,15 @@ export const ContainerLegend = styled.section`
 
         .legend-text{
             font-size: 1.2rem;
+        }
+    }
+
+
+    /* media queries for mobile */
+
+    @media(max-width: ${dimension.mobile}){
+        .legend-text{
+            font-size: 1rem;
         }
     }
 
